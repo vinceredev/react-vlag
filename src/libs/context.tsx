@@ -1,10 +1,5 @@
-import React, {
-  createContext,
-  useState,
-  useContext,
-  useEffect,
-  useCallback,
-} from "react";
+import React, { createContext, useContext } from "react";
+import { useCookies } from "react-cookie";
 
 interface VlagPropsType {
   id: string;
@@ -21,21 +16,34 @@ type VlagProps = {
 
 interface VlagContextType {
   isEnabled: (id: string) => void;
+  setEnable: (id: string) => void;
+  getFlags: () => void;
 }
 
 const VlagContext = createContext<VlagContextType>({
   isEnabled: () => undefined,
+  setEnable: () => undefined,
+  getFlags: () => undefined,
 });
 
 export const VlagProvider = ({ children, flags }: VlagProps) => {
-  const [flag, setFlag] = useState(flags);
+  const flagMap = flags.map((fl) => fl.id);
+  const [cookies, setCookie] = useCookies(flagMap);
 
   const isEnabled = (id: string) => {
-    return id;
+    return cookies[id] === "true";
+  };
+
+  const setEnable = (id: string) => {
+    setCookie(id, true);
+  };
+
+  const getFlags = () => {
+    return flags;
   };
 
   return (
-    <VlagContext.Provider value={{ isEnabled }}>
+    <VlagContext.Provider value={{ isEnabled, setEnable, getFlags }}>
       {children}
     </VlagContext.Provider>
   );
