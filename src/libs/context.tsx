@@ -49,4 +49,8 @@ export const VlagProvider = ({ children, flags }: VlagProps) => {
   );
 };
 
+export const tsxContext = () => {
+  console.log("a");
+};
+
 export const useVlag = () => useContext(VlagContext);

@@ -22,14 +22,24 @@
   ],
   "devDependencies": {
     "@types/jest": "^28.1.6",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-1": "^6.16.0",
     "express": "^4.18.1",
-    "html-webpack-plugin": "^5.5.0",
+    "html-webpack-plugin": "^2.24.1",
     "jest": "^28.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.7",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0"
   },
   "dependencies": {
     "@types/react": "^18.0.15",
