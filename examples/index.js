@@ -1,13 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { sayMessage } from "../dist";
+import { VlagProvider } from "../dist";
 import App from "./App";
 
-sayMessage();
-
 ReactDOM.render(
-  //   <VlagProvider>
-  <App />,
-  //   </VlagProvider>,
+  <VlagProvider
+    flags={[
+      {
+        id: "beta_feature",
+        name: "Beta Feature",
+        description: "Some texts",
+        helperText: "",
+        disabled: false,
+      },
+    ]}
+  >
+    <App />
+  </VlagProvider>,
   document.getElementById("root")
 );

@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext } from "react";
 import { useCookies } from "react-cookie";
 
 interface VlagPropsType {
@@ -15,13 +15,13 @@ type VlagProps = {
 };
 
 interface VlagContextType {
-  isEnabled: (id: string) => void;
+  isEnabled: (id: string) => boolean;
   setEnable: (id: string) => void;
   getFlags: () => void;
 }
 
 const VlagContext = createContext<VlagContextType>({
-  isEnabled: () => undefined,
+  isEnabled: () => false,
   setEnable: () => undefined,
   getFlags: () => undefined,
 });
@@ -49,8 +49,4 @@ export const VlagProvider = ({ children, flags }: VlagProps) => {
   );
 };
 
-export const tsxContext = () => {
-  console.log("a");
-};
-
-export const useVlag = () => useContext(VlagContext);
+export const useVlag = () => React.useContext(VlagContext);

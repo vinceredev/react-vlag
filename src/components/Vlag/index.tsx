@@ -1,14 +1,13 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { useVlag } from "../../libs/context";
 interface VlagProps {
   name: string;
-  children: React.ReactNode;
+  children: (isActive: boolean) => ReactElement;
 }
 
 const Vlag: React.FC<VlagProps> = (props) => {
   const ff = useVlag();
-  const isActive = ff.isEnabled(props.name);
-  return <>{props.children}</>;
+  return props.children(ff.isEnabled(props.name));
 };
 
 export default Vlag;

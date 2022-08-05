@@ -1,0 +1,1 @@
+export { default as Vlag } from './vlag';
