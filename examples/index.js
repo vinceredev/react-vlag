@@ -7,10 +7,17 @@ ReactDOM.render(
   <VlagProvider
     flags={[
       {
-        id: "beta_feature",
-        name: "Beta Feature",
-        description: "Some texts",
-        helperText: "",
+        id: "new_checkout_page",
+        name: "Checkout Page",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        helperText: "This is helper text",
+        disabled: false,
+      },
+      {
+        id: "new_product_page",
+        name: "Product Page",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        helperText: "This is helper text",
         disabled: false,
       },
     ]}
