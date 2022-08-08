@@ -10,15 +10,20 @@ ReactDOM.render(
         id: "new_checkout_page",
         name: "Checkout Page",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        helperText: "This is helper text",
+        helperText: "Will be available for beta testing end of 2022",
         disabled: false,
       },
       {
         id: "new_product_page",
         name: "Product Page",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        helperText: "This is helper text",
         disabled: false,
+      },
+      {
+        id: "new_cart_page",
+        name: "Cart Page",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        disabled: true,
       },
     ]}
   >

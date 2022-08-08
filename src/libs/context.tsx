@@ -16,7 +16,7 @@ type VlagProps = {
 
 interface VlagContextType {
   isEnabled: (id: string) => boolean;
-  setEnable: (id: string) => void;
+  setEnable: (id: string, val: boolean) => void;
   getFlags: () => Array<VlagPropsType>;
   flagMap: Array<string>;
 }
@@ -36,8 +36,8 @@ export const VlagProvider = ({ children, flags }: VlagProps) => {
     return cookies[id] === "true";
   };
 
-  const setEnable = (id: string) => {
-    setCookie(id, true);
+  const setEnable = (id: string, val: boolean) => {
+    setCookie(id, val);
   };
 
   const getFlags = () => {

@@ -14,10 +14,11 @@ const Features: React.FC = () => {
 
   const handleVlagChange = (key: string, val: boolean) => {
     setEnableFeature({ ...enableFeature, [key]: val });
+    vlag.setEnable(key, val);
   };
 
   return (
-    <div>
+    <div className="vlag-features">
       {vlagFeatures?.map((feature, i) => (
         <div key={i} className="vlag-features__item">
           <div className="vlag-features__item__content">
@@ -37,9 +38,10 @@ const Features: React.FC = () => {
           </div>
           <div className="vlag-features__item__toggle">
             <Switch
-              checked={false}
+              checked={enableFeature[feature?.id]}
+              disabled={feature.disabled}
               onClick={() =>
-                handleVlagChange(feature?.id, enableFeature[feature?.id])
+                !feature.disabled && handleVlagChange(feature?.id, !enableFeature[feature?.id])
               }
             />
           </div>
