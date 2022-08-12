@@ -1,6 +1,7 @@
 # React Vlag
+Getting easy to set feature flag
 
-### Create a context, provider to manage the feature flag state.
+### Add context at your App.js
 
 ```
 import { VlagProvider } from '@vincere/react-vlag'
@@ -19,9 +20,11 @@ const flags = [
   <App />
 </VlagProvider>
 ```
-### Create a hook to check whether the feature is enabled or not:
+### Hook to check the feature is enabled or not:
 
 ```
+import { VlagProvider } from '@vincere/react-vlag'
+
 const ff = useVlag()
 
 if (ff.isEnabled('beta_feature')) {
@@ -31,7 +34,7 @@ if (ff.isEnabled('beta_feature')) {
 return <ReleasedFeature />
 ```
 
-### Create a render prop component to check whether the feature is enabled or not:
+### Render prop component to check the feature is enabled or not:
 
 ```
 import { Vlag } from '@vincere/react-vlag'
@@ -41,4 +44,20 @@ return (
     {isActive => isActive ? <BetaFeatures /> : <ReleasedFeature />}
   </Vlag>
 )
+```
+
+### How to show toogle feature's page:
+
+```
+import { Features } from '@vincere/react-vlag'
+import '@vincere/react-vlag/dist/style.css'
+
+const Pages = () => {
+  return (
+    <>
+      <Heading>Feature Flags</Heading>
+      <Features />
+    </>
+  )
+}
 ```

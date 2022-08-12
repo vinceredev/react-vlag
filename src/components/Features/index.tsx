@@ -41,7 +41,8 @@ const Features: React.FC = () => {
               checked={enableFeature[feature?.id]}
               disabled={feature.disabled}
               onClick={() =>
-                !feature.disabled && handleVlagChange(feature?.id, !enableFeature[feature?.id])
+                !feature.disabled &&
+                handleVlagChange(feature?.id, !enableFeature[feature?.id])
               }
             />
           </div>

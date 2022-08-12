@@ -15,6 +15,7 @@
     "start": "nodemon examples/server.js"
   },
   "keywords": [
+    "react",
     "cookies"
   ],
   "author": "Vincere Digital",
