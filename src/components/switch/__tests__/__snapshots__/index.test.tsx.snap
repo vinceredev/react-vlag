@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders checked true correctly 1`] = `
+<div
+  className="vlag-switch"
+>
+  <label
+    className="vlag-switch__label"
+  >
+    <div
+      className="vlag-switch__item vlag-switch__item-active"
+    >
+      <div
+        className="vlag-switch__item__box"
+      />
+      <div
+        className="vlag-switch__item__dots"
+      />
+    </div>
+  </label>
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="vlag-switch"
+>
+  <label
+    className="vlag-switch__label"
+  >
+    <div
+      className="vlag-switch__item"
+    >
+      <div
+        className="vlag-switch__item__box"
+      />
+      <div
+        className="vlag-switch__item__dots"
+      />
+    </div>
+  </label>
+</div>
+`;
+
+exports[`renders disabled true correctly 1`] = `
+<div
+  className="vlag-switch"
+>
+  <label
+    className="vlag-switch__label"
+  >
+    <div
+      className="vlag-switch__item vlag-switch__item-disabled"
+    >
+      <div
+        className="vlag-switch__item__box"
+      />
+      <div
+        className="vlag-switch__item__dots"
+      />
+    </div>
+  </label>
+</div>
+`;

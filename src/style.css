@@ -17,7 +17,7 @@
   padding: 30px 40px;
 }
 
-.vlag-features__item:not(:first-child) {
+.vlag-features__item {
   margin-top: 26px;
 }
 
@@ -52,9 +52,9 @@
 }
 
 .vlag-switch__item .vlag-switch__item__box {
-  width: 70px;
-  height: 40px;
-  border-radius: 32px;
+  width: 50px;
+  height: 30px;
+  border-radius: 16px;
   background: rgba(0,0,0,0.1);
   cursor: pointer;
 }
@@ -69,18 +69,19 @@
 }
 
 .vlag-switch__item__dots {
-  top: 6px;
-  left: 6px;
+  top: 3px;
+  left: 3px;
   border-radius: 50%;
   position: absolute;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background: white;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-duration: .15s;
+  filter: drop-shadow(0px 2.72727px 5.45455px rgba(0, 35, 11, 0.2));
 }
 
 .vlag-switch__item-active .vlag-switch__item__dots {
-  transform: translateX(100%);
+  transform: translateX(calc(100% - 3px));
 }
 
