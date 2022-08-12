@@ -1,28 +1,12 @@
 import React from "react";
-import { useVlag, Vlag } from "../dist";
-
-const BetaFeature = () => {
-  return "Beta";
-};
-
-const ReleasedFeature = () => {
-  return "Released";
-};
+import { Features } from "../dist";
+import { injectStyle } from "../dist/inject-style";
 
 const App = () => {
-  const ff = useVlag();
-
+  injectStyle();
   return (
-    <Vlag name="beta_features">
-      {(isActive) => (isActive ? <BetaFeature /> : <ReleasedFeature />)}
-    </Vlag>
+    <Features>dsada</Features>
   );
-
-  // if (ff.isEnabled("beta_features")) {
-  //   return <BetaFeature />;
-  // }
-
-  // return <ReleasedFeature />;
 };
 
 export default App;

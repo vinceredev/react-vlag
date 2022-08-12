@@ -1,8 +1,8 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import { useVlag } from "../../libs/context";
 interface VlagProps {
   name: string;
-  children: (isActive: boolean) => ReactElement;
+  children: (isActive: boolean) => React.ReactElement;
 }
 
 const Vlag: React.FC<VlagProps> = (props) => {

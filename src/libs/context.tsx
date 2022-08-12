@@ -16,14 +16,16 @@ type VlagProps = {
 
 interface VlagContextType {
   isEnabled: (id: string) => boolean;
-  setEnable: (id: string) => void;
-  getFlags: () => void;
+  setEnable: (id: string, val: boolean) => void;
+  getFlags: () => Array<VlagPropsType>;
+  flagMap: Array<string>;
 }
 
 const VlagContext = createContext<VlagContextType>({
   isEnabled: () => false,
   setEnable: () => undefined,
-  getFlags: () => undefined,
+  getFlags: () => [],
+  flagMap: [],
 });
 
 export const VlagProvider = ({ children, flags }: VlagProps) => {
@@ -34,8 +36,8 @@ export const VlagProvider = ({ children, flags }: VlagProps) => {
     return cookies[id] === "true";
   };
 
-  const setEnable = (id: string) => {
-    setCookie(id, true);
+  const setEnable = (id: string, val: boolean) => {
+    setCookie(id, val);
   };
 
   const getFlags = () => {
@@ -43,7 +45,7 @@ export const VlagProvider = ({ children, flags }: VlagProps) => {
   };
 
   return (
-    <VlagContext.Provider value={{ isEnabled, setEnable, getFlags }}>
+    <VlagContext.Provider value={{ isEnabled, setEnable, getFlags, flagMap }}>
       {children}
     </VlagContext.Provider>
   );

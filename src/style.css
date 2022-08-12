@@ -1,0 +1,86 @@
+.vlag-features {
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+.vlag-features {
+  font-family: Helvetica, Arial;
+}
+
+.vlag-features__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #efefef;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  padding: 30px 40px;
+}
+
+.vlag-features__item:not(:first-child) {
+  margin-top: 26px;
+}
+
+.vlag-features__item__content__title {
+  margin: 0px 0px 16px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  font-family: sans-serif;
+}
+
+.vlag-features__item__content__description,
+.vlag-features__item__content__helper {
+  margin: 0px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.vlag-features__item__content__helper {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.vlag-switch__item {
+  position: relative;
+}
+
+.vlag-switch__item .vlag-switch__item__box {
+  width: 70px;
+  height: 40px;
+  border-radius: 32px;
+  background: rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.vlag-switch__item-active .vlag-switch__item__box {
+  background: #1890FF;
+}
+
+.vlag-switch__item-disabled .vlag-switch__item__box {
+  background: rgba(0,0,0,0.07);
+  cursor: not-allowed;
+}
+
+.vlag-switch__item__dots {
+  top: 6px;
+  left: 6px;
+  border-radius: 50%;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: white;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+}
+
+.vlag-switch__item-active .vlag-switch__item__dots {
+  transform: translateX(100%);
+}
+
