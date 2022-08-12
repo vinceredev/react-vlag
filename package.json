@@ -1,8 +1,8 @@
 {
   "name": "@vincere/react-vlag",
-  "version": "0.0.5-rc.1",
+  "version": "0.0.7-rc.1",
   "description": "Getting easy to set feature flag",
-  "main": "src/index.js",
+  "main": "dist",
   "scripts": {
     "clean": "rimraf dist",
     "copy-files": "copyfiles -u 1 src/**/*.css dist/",
