@@ -1,7 +1,7 @@
 {
-  "name": "react-vlag",
+  "name": "@vincere/react-vlag",
   "version": "0.0.3-rc.1",
-  "description": "",
+  "description": "Getting easy to set feature flag",
   "main": "src/index.js",
   "scripts": {
     "clean": "rimraf dist",
@@ -53,5 +53,17 @@
     "@types/react": "^18.0.15",
     "classnames": "^2.3.1",
     "react-cookie": "^4.1.1"
-  }
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/vincere-digital/research-and-development/react-vlag.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/vincere-digital/research-and-development/react-vlag/issues"
+  },
+  "homepage": "https://gitlab.com/vincere-digital/research-and-development/react-vlag#readme"
 }
