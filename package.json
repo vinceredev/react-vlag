@@ -50,8 +50,6 @@
     "webpack-dev-middleware": "^1.9.0"
   },
   "dependencies": {
-    "@fontsource/inter": "^4.5.12",
-    "@fontsource/plus-jakarta-sans": "^4.5.9",
     "@types/react": "^18.0.15",
     "classnames": "^2.3.1",
     "react-cookie": "^4.1.1"
