@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.vlag-features {
+  font-family: Helvetica, Arial;
+}
+
 .vlag-features__item {
   display: flex;
   justify-content: space-between;
