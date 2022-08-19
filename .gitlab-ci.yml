@@ -8,5 +8,4 @@ Unit Testing:
     - main
   script:
     - npm install
-    - npm run test --coverage
-  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+    - npm run test

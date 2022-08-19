@@ -9,7 +9,7 @@
     "style-injector": "style2js --out-dir dist dist/style.css",
     "format": "prettier --write .",
     "eslint": "eslint .",
-    "test": "jest",
+    "test": "jest  --watchAll=false --coverage",
     "prebuild": "npm run test && npm run format && npm run eslint && npm run clean && npm run copy-files && npm run style-injector",
     "preversion": "npm run build",
     "postversion": "git push --follow-tags",
