@@ -1,21 +1,19 @@
 {
   "name": "@vincere/react-vlag",
-  "version": "0.0.1-rc.3",
+  "version": "0.0.1-rc.4",
   "description": "Getting easy to set feature flag",
   "main": "./dist",
   "scripts": {
+    "build": "tsc",
     "clean": "rimraf dist",
     "copy-files": "copyfiles -u 1 src/**/*.css dist/",
-    "style-injector": "style2js --out-dir dist dist/style.css",
-    "format": "prettier --write .",
     "eslint": "eslint .",
-    "test": "jest  --watchAll=false --coverage",
+    "format": "prettier --write .",
+    "postversion": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
     "prebuild": "npm run test && npm run format && npm run eslint && npm run clean && npm run copy-files && npm run style-injector",
-    "preversion": "npm run build",
-    "postversion": "git push --follow-tags",
-    "add-tags" : "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
-    "build": "tsc",
-    "start": "nodemon examples/server.js"
+    "start": "nodemon examples/server.js",
+    "style-injector": "style2js --out-dir dist dist/style.css",
+    "test": "jest  --watchAll=false --coverage"
   },
   "keywords": [
     "react",
