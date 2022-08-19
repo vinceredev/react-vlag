@@ -57,7 +57,6 @@ import '@vincere/react-vlag/dist/style.css'
 const Pages = () => {
   return (
     <>
-      <Heading>Feature Flags</Heading>
       <Features />
     </>
   )
