@@ -1,6 +1,6 @@
 {
   "name": "@vincere/react-vlag",
-  "version": "0.0.13-rc.1",
+  "version": "0.0.14-rc.1",
   "description": "Getting easy to set feature flag",
   "main": "./dist",
   "scripts": {
@@ -9,10 +9,10 @@
     "style-injector": "style2js --out-dir dist dist/style.css",
     "format": "prettier --write .",
     "eslint": "eslint .",
-    "prebuild": "npm run format && npm run eslint && npm run clean && npm run copy-files && npm run style-injector",
+    "test": "jest",
+    "prebuild": "npm run test && npm run format && npm run eslint && npm run clean && npm run copy-files && npm run style-injector",
     "preversion": "npm run build",
     "postversion": "git push --follow-tags",
-    "test": "jest",
     "build": "tsc",
     "start": "nodemon examples/server.js"
   },

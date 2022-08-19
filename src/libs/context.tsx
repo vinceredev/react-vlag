@@ -44,6 +44,11 @@ export const VlagProvider = ({ children, flags }: VlagProps) => {
     return flags;
   };
 
+  let hasDuplicate = flagMap.some((val, i) => flagMap.indexOf(val) !== i);
+  if (hasDuplicate) {
+    return <>flag id is duplicate</>;
+  }
+
   return (
     <VlagContext.Provider value={{ isEnabled, setEnable, getFlags, flagMap }}>
       {children}

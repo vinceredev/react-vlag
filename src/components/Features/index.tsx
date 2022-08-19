@@ -1,6 +1,6 @@
 import React from 'react';
 import { useVlag } from '../../libs/context';
-import Switch from '../switch';
+import Switch from '../Switch';
 
 const Features: React.FC = () => {
   const vlag = useVlag();

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`error: vlag provider renders fails if flags id same 1`] = `"flag id is duplicate"`;
+
+exports[`success: vlag provider renders correctly 1`] = `"content"`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders checked true correctly 1`] = `
+exports[`success: renders checked true correctly 1`] = `
 <div
   className="vlag-switch"
 >
@@ -21,7 +21,7 @@ exports[`renders checked true correctly 1`] = `
 </div>
 `;
 
-exports[`renders correctly 1`] = `
+exports[`success: renders correctly 1`] = `
 <div
   className="vlag-switch"
 >
@@ -42,7 +42,7 @@ exports[`renders correctly 1`] = `
 </div>
 `;
 
-exports[`renders disabled true correctly 1`] = `
+exports[`success: renders disabled true correctly 1`] = `
 <div
   className="vlag-switch"
 >
