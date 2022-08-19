@@ -1,5 +1,6 @@
 stages:
   - test
+  - deploy
 
 Unit Testing:
   stage: test
@@ -9,3 +10,11 @@ Unit Testing:
   script:
     - npm install
     - npm run test
+
+Publish to NPM:
+  stage: deploy
+  only:
+    - main
+  script:
+    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+    - npm publish --access public

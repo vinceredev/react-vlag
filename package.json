@@ -1,6 +1,6 @@
 {
   "name": "@vincere/react-vlag",
-  "version": "0.0.16-rc.1",
+  "version": "0.0.17-rc.1",
   "description": "Getting easy to set feature flag",
   "main": "./dist",
   "scripts": {
