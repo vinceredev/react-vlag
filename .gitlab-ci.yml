@@ -6,7 +6,7 @@ Unit Testing:
   stage: test
   image: node:latest
   only:
-    - main
+    - tags
   script:
     - npm install
     - npm run test
@@ -15,7 +15,7 @@ Publish to NPM:
   stage: deploy
   image: node:latest
   only:
-    - main
+    - tags
   script:
     - npm install
     - npm run build
