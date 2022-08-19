@@ -1,6 +1,6 @@
 {
   "name": "@vincere/react-vlag",
-  "version": "0.0.10-rc.1",
+  "version": "0.0.12-rc.1",
   "description": "Getting easy to set feature flag",
   "main": "./dist",
   "scripts": {
@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@types/react": "^18.0.15",
+    "@types/react-test-renderer": "^18.0.0",
     "classnames": "^2.3.1",
     "react-cookie": "^4.1.1",
     "react-test-renderer": "^18.2.0"
