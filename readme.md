@@ -2,7 +2,7 @@
 
 Getting easy to set feature flag
 
-### Add context at your App.js
+### Add provider to your src/index.js
 
 ```
 import { VlagProvider } from '@vincere/react-vlag'
@@ -25,7 +25,7 @@ const flags = [
 ### Hook to check the feature is enabled or not:
 
 ```
-import { VlagProvider } from '@vincere/react-vlag'
+import { useVlag } from '@vincere/react-vlag'
 
 const ff = useVlag()
 

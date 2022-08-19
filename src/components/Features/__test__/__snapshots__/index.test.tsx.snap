@@ -1,7 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`success: renders correctly 1`] = `
+exports[`success: vlag features renders correctly 1`] = `
 <div
   className="vlag-features"
-/>
+>
+  <div
+    className="vlag-features__item"
+  >
+    <div
+      className="vlag-features__item__content"
+    >
+      <h2
+        className="vlag-features__item__content__title"
+      >
+        Checkout Page
+      </h2>
+      <p
+        className="vlag-features__item__content__description"
+      >
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+      </p>
+      <p
+        className="vlag-features__item__content__helper"
+      >
+        Will be available for beta testing end of 2022
+      </p>
+    </div>
+    <div
+      className="vlag-features__item__toggle"
+    >
+      <div
+        className="vlag-switch"
+      >
+        <label
+          className="vlag-switch__label"
+        >
+          <div
+            className="vlag-switch__item  "
+            onClick={[Function]}
+          >
+            <div
+              className="vlag-switch__item__box"
+            />
+            <div
+              className="vlag-switch__item__dots"
+            />
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    className="vlag-features__item"
+  >
+    <div
+      className="vlag-features__item__content"
+    >
+      <h2
+        className="vlag-features__item__content__title"
+      >
+        Product Page
+      </h2>
+      <p
+        className="vlag-features__item__content__description"
+      >
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+      </p>
+    </div>
+    <div
+      className="vlag-features__item__toggle"
+    >
+      <div
+        className="vlag-switch"
+      >
+        <label
+          className="vlag-switch__label"
+        >
+          <div
+            className="vlag-switch__item  "
+            onClick={[Function]}
+          >
+            <div
+              className="vlag-switch__item__box"
+            />
+            <div
+              className="vlag-switch__item__dots"
+            />
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
 `;
