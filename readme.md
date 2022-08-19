@@ -1,4 +1,5 @@
 # React Vlag
+
 Getting easy to set feature flag
 
 ### Add context at your App.js
@@ -20,6 +21,7 @@ const flags = [
   <App />
 </VlagProvider>
 ```
+
 ### Hook to check the feature is enabled or not:
 
 ```

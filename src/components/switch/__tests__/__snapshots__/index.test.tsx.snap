@@ -8,7 +8,7 @@ exports[`renders checked true correctly 1`] = `
     className="vlag-switch__label"
   >
     <div
-      className="vlag-switch__item vlag-switch__item-active"
+      className="vlag-switch__item vlag-switch__item-active "
     >
       <div
         className="vlag-switch__item__box"
@@ -29,7 +29,7 @@ exports[`renders correctly 1`] = `
     className="vlag-switch__label"
   >
     <div
-      className="vlag-switch__item"
+      className="vlag-switch__item  "
     >
       <div
         className="vlag-switch__item__box"
@@ -50,7 +50,7 @@ exports[`renders disabled true correctly 1`] = `
     className="vlag-switch__label"
   >
     <div
-      className="vlag-switch__item vlag-switch__item-disabled"
+      className="vlag-switch__item  vlag-switch__item-disabled"
     >
       <div
         className="vlag-switch__item__box"

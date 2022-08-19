@@ -1,5 +1,5 @@
-import React, { createContext } from "react";
-import { useCookies } from "react-cookie";
+import React, { createContext } from 'react';
+import { useCookies } from 'react-cookie';
 
 interface VlagPropsType {
   id: string;
@@ -25,7 +25,7 @@ const VlagContext = createContext<VlagContextType>({
   isEnabled: () => false,
   setEnable: () => undefined,
   getFlags: () => [],
-  flagMap: [],
+  flagMap: []
 });
 
 export const VlagProvider = ({ children, flags }: VlagProps) => {
@@ -33,7 +33,7 @@ export const VlagProvider = ({ children, flags }: VlagProps) => {
   const [cookies, setCookie] = useCookies(flagMap);
 
   const isEnabled = (id: string) => {
-    return cookies[id] === "true";
+    return cookies[id] === 'true';
   };
 
   const setEnable = (id: string, val: boolean) => {

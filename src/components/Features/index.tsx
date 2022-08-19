@@ -1,6 +1,6 @@
-import React from "react";
-import { useVlag } from "../../libs/context";
-import Switch from "../switch";
+import React from 'react';
+import { useVlag } from '../../libs/context';
+import Switch from '../switch';
 
 const Features: React.FC = () => {
   const vlag = useVlag();
@@ -22,18 +22,12 @@ const Features: React.FC = () => {
       {vlagFeatures?.map((feature, i) => (
         <div key={i} className="vlag-features__item">
           <div className="vlag-features__item__content">
-            <h2 className="vlag-features__item__content__title">
-              {feature?.name}
-            </h2>
+            <h2 className="vlag-features__item__content__title">{feature?.name}</h2>
             {feature?.description && (
-              <p className="vlag-features__item__content__description">
-                {feature?.description}
-              </p>
+              <p className="vlag-features__item__content__description">{feature?.description}</p>
             )}
             {feature?.helperText && (
-              <p className="vlag-features__item__content__helper">
-                {feature?.helperText}
-              </p>
+              <p className="vlag-features__item__content__helper">{feature?.helperText}</p>
             )}
           </div>
           <div className="vlag-features__item__toggle">
@@ -41,8 +35,7 @@ const Features: React.FC = () => {
               checked={enableFeature[feature?.id]}
               disabled={feature.disabled}
               onClick={() =>
-                !feature.disabled &&
-                handleVlagChange(feature?.id, !enableFeature[feature?.id])
+                !feature.disabled && handleVlagChange(feature?.id, !enableFeature[feature?.id])
               }
             />
           </div>

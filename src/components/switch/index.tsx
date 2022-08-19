@@ -1,5 +1,4 @@
-import React, { FC, InputHTMLAttributes } from "react";
-import cx from "classnames";
+import React, { FC, InputHTMLAttributes } from 'react';
 
 interface SwitchProps {
   checked?: boolean;
@@ -15,11 +14,9 @@ const Switch: FC<SwitchProps & InputHTMLAttributes<HTMLInputElement>> = ({
     <div className="vlag-switch">
       <label className="vlag-switch__label">
         <div
-          className={cx(
-            "vlag-switch__item",
-            checked && "vlag-switch__item-active",
-            disabled && "vlag-switch__item-disabled"
-          )}
+          className={`vlag-switch__item ${checked ? 'vlag-switch__item-active' : ''} ${
+            disabled ? 'vlag-switch__item-disabled' : ''
+          }`}
           {...rest}
         >
           <div className="vlag-switch__item__box"></div>
