@@ -1,2 +1,2 @@
-export { default as Features } from './features/index';
-export { default as Vlag } from './vlag';
+export { default as Features } from './Features/index';
+export { default as Vlag } from './Vlag';
